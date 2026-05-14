@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHP Array Example</title>
+    <title>PHP Aray Example</title>
 </head>
 <body>
 
@@ -10,7 +10,7 @@
     <?php
 
         // Create Array
-        $students = array("Aarry", "Rahul", "Sneha", "Priya");
+        $students = array("Aary", "Rahul", "Siddhesh", "Arnav");
 
         echo "<h3>Displaying Array Values Using Loop</h3>";
 
