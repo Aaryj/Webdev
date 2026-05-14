@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+
+        function validateForm() {
+
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+
+            // Check empty fields
+            if (name == "" || email == "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            // Email validation
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Invalid Email Format");
+                return false;
+            }
+
+            // Name validation
+            let namePattern = /^[A-Za-z ]+$/;
+
+            if (!name.match(namePattern)) {
+                alert("Name should contain only alphabets.");
+                return false;
+            }
+
+            alert("Form Submitted Successfully");
+            return true;
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form name="myForm" onsubmit="return validateForm()">
+
+        <label>Name:</label>
+        <input type="text" name="name">
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" name="email">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
