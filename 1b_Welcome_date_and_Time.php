@@ -5,9 +5,8 @@
 </head>
 <body>
 
-    <h1>Welcome to PHP Programming</h1>
-
     <?php
+        echo "Welcome to PHP Programming<br>";
         date_default_timezone_set("Asia/Kolkata");
 
         echo "<h3>Current Date: " . date("d-m-Y") . "</h3>";
